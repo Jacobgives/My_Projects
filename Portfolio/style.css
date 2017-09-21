@@ -1,0 +1,104 @@
+.wrapper{
+  }
+.Header{
+  display: inline;
+}
+#name{
+  display:inline-block;
+}
+#title{
+  display: inline;
+  margin: 0 0 0 300px;
+}
+.pad{
+  padding: 2px 10px 2px 10px;
+}
+.body{
+background: linear-gradient(purple,gray);
+}
+.picadesc{
+  display: inline-block;
+  height: 200px;
+}
+.picadesc img{
+  margin: 30px 0 10px 0;
+  height: 200px;
+  width: auto;
+  border: 5px solid black;
+}
+.about{
+  width: 500px;
+  display: inline-block;
+  margin-left: 35px;
+}
+.abH{
+  background: linear-gradient(grey, beige);
+}
+.abBod{
+  background-color: beige;
+}
+.threeSects{
+margin: 5px;
+}
+#lest{
+  width: 260px;
+  height:auto;
+}
+.st{
+  background-color: beige;
+  width: 260px;
+  margin: 20px;
+  display: inline-block;
+}
+.st img:not(#lest){
+  height: 42px;
+  width: auto;
+  padding-left: 5px;
+}
+#and{
+  width: 260px;
+  height:auto;
+}
+.nd img:not(#and){
+  height: 42px;
+  width: auto;
+  padding-left: 5px;
+}
+.nd{
+background-color: beige;
+width: 260px;
+margin: 20px;
+display: inline-block;
+}
+#sword{
+  width: 260px;
+  height:auto;
+}
+.rd img:not(#sword){
+  height: 42px;
+  width: auto;
+  padding-left: 5px;
+}
+.rd{
+  background-color: beige;
+  width: 260px;
+  margin: 20px;
+  display: inline-block;
+}
+.Footer{
+  margin-left: 250px;
+  display: inline;
+}
+.t{
+margin-left: 400px;
+}
+.b{
+margin-left: 325px;
+}
+.b img{
+  height: 17px;
+  width: auto;
+}
+form{
+margin-left: 100px;
+}

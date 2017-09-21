@@ -1,0 +1,112 @@
+.wrapper{
+  width: 1000px;
+  background-color: white;
+}
+.Header{
+}
+.Header img{
+  display: inline-block;
+  height: 100px;
+  width: auto;
+}
+.Header p{
+  text-align: right;
+  display: block;
+  width: 300px;
+  vertical-align: top;
+  margin-left: 500px;
+}
+.searchbar{
+
+  display: inline-block;
+  width: 800px;
+  height:50px;
+  vertical-align: top;
+}
+.hl{
+  display: inline-block;
+}
+.Header form{
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px;
+  margin-left: 520px;
+  background-color: slategray;
+  vertical-align: top;
+  display: block;
+  margin-right: 0px;
+  border: 20px solid slategray;
+}
+.nav, .main:not(Tysk){
+  margin: 30px 0 0 0;
+}
+.nav{
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px;
+  margin: 30px;
+  background-color: lightblue;
+  border: 15px solid lightblue;
+}
+.main:not(.nav){
+
+}
+.nav h2{
+  display: inline;
+}
+form{
+  display: inline;
+  vertical-align: top;
+}
+.hl{
+  text-align: center;
+  width: 300px;
+  display: inline-block;
+}
+.info{
+  text-align: center;
+  vertical-align: top;
+display: inline-block;
+width: 400px;
+}
+.Desc-of-lang{
+}
+.quote{
+  display: inline-block;
+  width: 400px;
+}
+#yellow{
+    color: yellow;
+}
+.Tysk{
+  align-content: center;
+  display: block;
+  background-color: lightgreen;
+width: 1000;
+}
+hr{
+  height: 5px;
+  background-color: blue;
+}
+.GS{
+  padding-left:30px;
+  text-align: center;
+
+  vertical-align: top;
+  width: 400px;
+  display: inline-block;
+}
+.Apps{
+  text-align: center;
+  vertical-align: top;
+  width: 400px;
+  display: inline-block;
+}
+.Footer{
+
+text-align: center;
+  background: linear-gradient(darkblue, blue);
+
+}
+.Footer p{
+  margin-left: 70px;
+  vertical-align: bottom;
+}
