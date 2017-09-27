@@ -1,0 +1,43 @@
+#button42{
+  height: 150px;
+  width: 250px;
+  color: beige;
+  background-color: crimson;
+  box-shadow: 3px 3px 3px 0px black;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#button57{
+  height: 150px;
+  width: 250px;
+  color: beige;
+  background-color: blue;
+  box-shadow: 3px 3px 3px 0px black;
+  font-size: 20px;
+  font-weight: bold;
+}
+#button65{
+  height: 150px;
+  width: 250px;
+  color : beige;
+  background-color: green;
+  box-shadow: 3px 3px 3px 0px black;
+  font-size: 20px;
+  font-weight: bold;
+}
+#button92{
+  height: 150px;
+  width: 250px;
+  color : beige;
+  background-color: maroon;
+  box-shadow: 3px 3px 3px 0px black;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#dog{
+  border: 3px solid red;
+  /*border-color: red;*/
+  width: 300px;
+}

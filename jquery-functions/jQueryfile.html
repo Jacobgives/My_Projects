@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="jQueryfile.css">
+    <script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript">
+      var string = 0;
+      $(document).ready(function(){
+
+        // $('#button42').click(function(){
+        //   alert('this is the alert');
+        // })
+        $('#button42').click(function(){
+          $('#prestige').fadeOut();
+        });
+
+        $('#button57').click(function(){
+          $('#prestige').show();
+
+        })
+        $('#button65').click(function(){
+          string = $('#dog').attr('alt');
+          console.log(string)
+        })
+        $('#button92').click(function(){
+          $('#dog').attr("src", "the_prestige.jpg");
+          $('#dog').attr("alt", "I have tranformed from a dog!");
+          string = $("#dog").attr('alt');
+          console.log(string);
+        })
+
+
+      })
+
+    </script>
+
+  </head>
+  <body>
+
+    <img src="the_prestige.jpg" id="prestige" alt="prest">
+    <img src="chocolate-lab-3.jpg" id="dog" alt="Unsuspectingly believe I am a dog!!">
+
+    <button type="button" id="button42" name="button">BUTTON 42</button>
+    <button type="button" id="button57" name="button">BUTTON 57</button>
+    <button type="button" id="button65" name="button">BUTTON 65</button>
+    <button type="button" id="button92" name="button">BUTTON 92</button>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="jQueryfile.css">
+    <script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript">
+      var string = 0;
+      $(document).ready(function(){
+
+        $('#button42').click(function(){
+          $('#prestige').fadeOut();
+        });
+        $('#button57').click(function(){
+          $('#prestige').show();
+        })
+        $('#button65').click(function(){
+          string = $('#dog').attr('alt');
+          console.log(string)
+        })
+        $('#button92').click(function(){
+          $('#dog').attr("src", "the_prestige.jpg");
+          $('#dog').attr("alt", "I have tranformed from a dog!");
+          string = $("#dog").attr('alt');
+          console.log(string);
+        })
+
+        $('#button94').click(function(){
+          $('#prestige').toggle();
+        });
+
+        $('#button96').click(function(){
+          $('#prestige').slideToggle();
+        });
+        $('#button97').click(function(){
+          $('#prestige').fadeIn();
+        });
+
+      })
+      // THE FUNCTIONS COMPLETE ARE:
+      //   .fadeOut
+      //   .show
+      //   .attr
+      // .toggle
+      // .slideToggle
+      // .fadeIn
+
+    </script>
+  </head>
+  <body>
+    <img src="the_prestige.jpg" id="prestige" alt="prest">
+    <div class="dog_pic">
+      <img src="chocolate-lab-3.jpg" id="dog" alt="Unsuspectingly believe I am a dog!!" height="100" width="75">
+    </div>
+
+    <button type="button" id="button42" name="button">Button42 .fadeOut first picture</button>
+    <button type="button" id="button57" name="button">Button57.show first picture (after .fadeOut)</button>
+    <button type="button" id="button65" name="button">Button65 Get .attr 'alt' of second pic</button>
+    <button type="button" id="button92" name="button">Button92 Change .attr src, alt, get .attr alt on pic 2</button>
+    <button type="button" id="button93" name="button">Button93 .slideDown second pic</button>
+    <button type="button" id="button94" name="button">Button94 .toggle first picture</button>
+    <button type="button" id="button95" name="button">Button95 .slideUp second pic</button>
+    <button type="button" id="button96" name="button">Button96 .slideToggle first pic</button>
+    <button type="button" id="button97" name="button">Button97 .fadeIn first pic</button>
+    <button type="button" id="button98" name="button">Button98 .addClass</button>
+    <button type="button" id="button99" name="button">Button99 .before</button>
+    <button type="button" id="button100" name="button">Button100 .after</button>
+    <button type="button" id="button101" name="button">Button101 .append</button>
+    <button type="button" id="button102" name="button">Button102 .html</button>
+    <button type="button" id="button103" name="button">Button103 .val</button>
+
+
+  </body>
+</html>
