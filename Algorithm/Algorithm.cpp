@@ -100,79 +100,67 @@ void RecogniseShapes(int ArrReal[MAXWIDTH][MAXHEIGHTH])
     }
   }
 
-    for(int l = 0; l < MAXWIDTH; l++) //position
+  for(int l = 0; l < MAXWIDTH; l++) //position
+  {
+    for(int m = 0; m < MAXHEIGHTH; m++)
     {
-      for(int m = 0; m < MAXHEIGHTH; m++)
+      for(int x = 0; x <= MAXWIDTH; x++)
       {
-        if(ArrReal[l][m])
+        for(int y = 0;y <= MAXHEIGHTH; y++)
         {
-          for(int x = 0; x <= MAXWIDTH; x++)
-          {
-            for(int y = 0;y <= MAXHEIGHTH; y++)
-            {
-                  if((x==MAXWIDTH) &&(y==MAXHEIGHTH))
-                    ArrSimCenters[x][y][2] = 1;
-                  else if((x==0) &&(y==MAXHEIGHTH))
-                    ArrSimCenters[x][y][3] = 1;
-                  else if((x==0) &&(y==0))
-                    ArrSimCenters[x][y][0] = 1;
-                  else if((x==MAXWIDTH) &&(y==0))
-                    ArrSimCenters[x][y][1] = 1;
-                  else if(x==MAXWIDTH)
-                    {
-                    ArrSimCenters[x][y][1] = 1;
-                    ArrSimCenters[x][y][2] = 1;
-                    }
-                  else if(y==MAXHEIGHTH)
-                    {
-                    ArrSimCenters[x][y][2] = 1;
-                    ArrSimCenters[x][y][3] = 1;
-                    }
-                  else if(x==0)
-                    {
-                    ArrSimCenters[x][y][3] = 1;
-                    ArrSimCenters[x][y][0] = 1;
-                    }
-                  else if(y==0)
-                    {
-                    ArrSimCenters[x][y][0] = 1;
-                    ArrSimCenters[x][y][1] = 1;
-                    }
-                  else
-                  {
-                    ArrSimCenters[x][y][0]=1;
-                    ArrSimCenters[x][y][1]=1;
-                    ArrSimCenters[x][y][2]=1;
-                    ArrSimCenters[x][y][3]=1;
-                  }
+            if((((x==MAXWIDTH) &&(y==MAXHEIGHTH)) && (ArrReal[l][m]==1)))
+              ArrSimCenters[x][y][2] = 1;
+            else if(((x==0) &&(y==MAXHEIGHTH)) && (ArrReal[l][m]==1))
+              ArrSimCenters[x][y][3] = 1;
+            else if(((x==0) &&(y==0)) && (ArrReal[l][m]==1))
+              ArrSimCenters[x][y][0] = 1;
+            else if(((x==MAXWIDTH) &&(y==0)) && (ArrReal[l][m]==1))
+              ArrSimCenters[x][y][1] = 1;
+            else if((x==MAXWIDTH) && (ArrReal[l][m]==1))
+              {
+              ArrSimCenters[x][y][1] = 1;
+              ArrSimCenters[x][y][2] = 1;
               }
-            }
-        }
-
-        else{
-          for(int x = 0; x <= MAXWIDTH; x++)
-          {
-            for(int y = 0;y <= MAXHEIGHTH; y++)
+            else if((y==MAXHEIGHTH) && (ArrReal[l][m]==1))
+              {
+              ArrSimCenters[x][y][2] = 1;
+              ArrSimCenters[x][y][3] = 1;
+              }
+            else if((x==0) && (ArrReal[l][m]==1))
+              {
+              ArrSimCenters[x][y][3] = 1;
+              ArrSimCenters[x][y][0] = 1;
+              }
+            else if((y==0) && (ArrReal[l][m]==1))
+              {
+              ArrSimCenters[x][y][0] = 1;
+              ArrSimCenters[x][y][1] = 1;
+              }
+            else if((((x!=0) && (y!=0)) && ((x!=MAXWIDTH) && (y!=MAXHEIGHTH))) && (ArrReal[l][m]==1))
             {
+              ArrSimCenters[x][y][0]=1;
+              ArrSimCenters[x][y][1]=1;
+              ArrSimCenters[x][y][2]=1;
+              ArrSimCenters[x][y][3]=1;
+            }
+            else{
               ArrSimCenters[x][y][0]=0;
               ArrSimCenters[x][y][1]=0;
               ArrSimCenters[x][y][2]=0;
               ArrSimCenters[x][y][3]=0;
-              cout << "x: "<< x << " y: " << y << "\n" <<
-              ArrSimCenters[x][y][2] << " " << ArrSimCenters[x][y][3] << "\n"
-              "\n" << ArrSimCenters[x][y][1] << " "<< ArrSimCenters[x][y][0] << "\n\n";
-
             }
-          }
+            cout << "x: "<< x << " y: " << y << "\n" <<
+            ArrSimCenters[x][y][2] << " " << ArrSimCenters[x][y][3] << "\n"
+            "\n" << ArrSimCenters[x][y][1] << " "<< ArrSimCenters[x][y][0] << "\n\n";
         }
       }
+    }
   }
 }
-
 int main(){
   int arr[20][20];
   for(int i = 0; i < 20; i++)
     for(int h = 0; h < 20; h++)
-      arr[i][h]=(rand()%2);
+    arr[i][h]=(rand()%2);
 RecogniseShapes(arr);
 }

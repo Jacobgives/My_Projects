@@ -12,39 +12,74 @@
         $('#button42').click(function(){
           $('#prestige').fadeOut();
         });
+
         $('#button57').click(function(){
           $('#prestige').show();
         })
-        $('#button65').click(function(){
+
+        $('#b1').click(function(){
           string = $('#dog').attr('alt');
           console.log(string)
         })
-        $('#button92').click(function(){
+
+        $('#b2').click(function(){
           $('#dog').attr("src", "the_prestige.jpg");
           $('#dog').attr("alt", "I have tranformed from a dog!");
           string = $("#dog").attr('alt');
           console.log(string);
         })
 
-        $('#button94').click(function(){
+        $('#b3').click(function(){
           $('#prestige').toggle();
         });
 
-        $('#button96').click(function(){
+        $('#b4').click(function(){
           $('#prestige').slideToggle();
         });
-        $('#button97').click(function(){
+
+        $('#b5').click(function(){
           $('#prestige').fadeIn();
         });
 
+        $('p, h3, li').hover(function(){
+  				$(this).css('color', 'white');
+  			}, function(){
+  				$(this).css('color', 'black');
+  			});
+
+  			$('a').click(function(){
+  				alert("we don't actually serve pizza...");
+  			});
+
+  			$('img').click(function(){
+  				$(this).slideUp();
+  			});
+
+  			$('h5').click(function(){
+  					$('img').slideDown("slow");
+  				// $('img').slidedown();
+  			});
+
+  			$('button').click(function(){
+  				$('input:checked').val(function(){
+  				alert("Thank you for your input, we like " + $('input:checked').val() + " too!");
+
+  				})
+  			});
       })
-      // THE FUNCTIONS COMPLETE ARE:
-      //   .fadeOut
-      //   .show
-      //   .attr
-      // .toggle
-      // .slideToggle
-      // .fadeIn
+      /* THE FUNCTIONS INCOMPLETE ARE:
+      hide
+      toggle
+      fadeIn
+      addClass
+      before
+      after
+      append
+      html
+      val
+      text
+      data
+      */
 
     </script>
   </head>
@@ -54,22 +89,70 @@
       <img src="chocolate-lab-3.jpg" id="dog" alt="Unsuspectingly believe I am a dog!!" height="100" width="75">
     </div>
 
-    <button type="button" id="button42" name="button">Button42 .fadeOut first picture</button>
-    <button type="button" id="button57" name="button">Button57.show first picture (after .fadeOut)</button>
-    <button type="button" id="button65" name="button">Button65 Get .attr 'alt' of second pic</button>
-    <button type="button" id="button92" name="button">Button92 Change .attr src, alt, get .attr alt on pic 2</button>
-    <button type="button" id="button93" name="button">Button93 .slideDown second pic</button>
-    <button type="button" id="button94" name="button">Button94 .toggle first picture</button>
-    <button type="button" id="button95" name="button">Button95 .slideUp second pic</button>
-    <button type="button" id="button96" name="button">Button96 .slideToggle first pic</button>
-    <button type="button" id="button97" name="button">Button97 .fadeIn first pic</button>
-    <button type="button" id="button98" name="button">Button98 .addClass</button>
-    <button type="button" id="button99" name="button">Button99 .before</button>
-    <button type="button" id="button100" name="button">Button100 .after</button>
-    <button type="button" id="button101" name="button">Button101 .append</button>
-    <button type="button" id="button102" name="button">Button102 .html</button>
-    <button type="button" id="button103" name="button">Button103 .val</button>
+    <button type="button" id="b1" name="button">Button42 .fadeOut first picture</button>
+    <button type="button" id="b2" name="button">Button57.show first picture (after .fadeOut)</button>
+    <button type="button" id="b3" name="button">Button65 Get .attr 'alt' of second pic</button>
+    <button type="button" id="b4" name="button">Button92 Change .attr src, alt, get .attr alt on pic 2</button>
+    <button type="button" id="b5" name="button">Button93 .slideDown second pic</button>
+    <button type="button" id="b6" name="button">Button94 .toggle first picture</button>
+    <button type="button" id="b7" name="button">Button95 .slideUp second pic</button>
+    <button type="button" id="b8" name="button">Button96 .slideToggle first pic</button>
+    <button type="button" id="b9" name="button">Button97 .fadeIn first pic</button>
+    <button type="button" id="b10" name="button">Button98 .addClass</button>
+    <button type="button" id="b11" name="button">Button99 .before</button>
+    <button type="button" id="b12" name="button">Button100 .after</button>
+    <button type="button" id="b13" name="button">Button101 .append</button>
+    <button type="button" id="b14" name="button">Button102 .html</button>
+    <button type="button" id="b15" name="button">Button103 .val</button>
+    <div id='top_headers'>
+      <h1>The Codingdojo Pizzeria!</h1>
+      <h2>The best slice in the valley!</h2>
+    </div> <!--end of top headers -->
+    <div id='survey'>
+      Question of the month:  What is your favorite pizza topping?
+      <input type='radio' name='topping' value='pepperoni'>Pepperoni
+      <input type='radio' name='topping' value='bacon'>Bacon
+      <input type='radio' name='topping' value='pineapple'>Pineapple
+      <button>Tell us!</button>
+    </div>
+    <div id='left_content'>
+      <div class='box'>
+        <h3>About us!</h3>
+        <p>
+          We know that writing code works up an appetite, that's why Codingdojo is proud to announce that we are opening a
+          pizza kitchen inside our mountain view location!  Head chef Michael "spumoni" Choi has lots of delicious family recipes
+          to share with our customers! Whether you like flat crust or deep dish so deep you can't cut through it,
+          the Codingdojo pizzeria has something you and all of your friends can agree on.  Using only the
+          freshest ingredients the Bay area has to offer, the Codingdojo pie will be sure to debug your hunger!
+        </p>
+      </div>
+      <div class='box'>
+        <h3>Thin Crust Pizza</h3>
+        <ul>
+          <li>Small: $10.00</li>
+          <li>Medium: $15.00</li>
+          <li>Large: $20.00</li>
+          <li>Dojo size: $30.00 (feeds 10 ninjas)</li>
+          <li>Toppings: $2.00 per small, $2.50 per medium, $2.75 per large, $3.00 per Dojo</li>
+        </ul>
+        <h3>Deep dish, 'Dojo style' Pizza</h3>
+        <ul>
+          <li>Small: $12.00</li>
+          <li>Medium: $17.00</li>
+          <li>Large: $24.00</li>
+          <li>Dojo size: $34.00 (feeds 10 ninjas)</li>
+          <li>Toppings: $2.00 per small, $2.50 per medium, $2.75 per large, $3.00 per Dojo</li>
+        </ul>
+        <a href="#">Click here to order!</a>
+      </div>
 
+    </div>  <!--end of left content -->
+    <div id='right_content'>
+      <img src="pizza.jpg">
+      <h5>Our pizza runs on all browsers!</h5>
+      <img src='logo.png'>
+      <h5>Made from the freshest ingredients!</h5>
+    </div>  <!--end of right content -->
 
   </body>
 </html>

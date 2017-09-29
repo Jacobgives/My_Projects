@@ -1,0 +1,22 @@
+#wrapper{
+    width: 80%;
+    margin: 0 auto;
+}
+
+#pokeImg{
+    width: 65%;
+    display: inline-block;
+}
+
+#pokedex{
+    width: 25%;
+    display: inline-block;
+    height: 750px;
+    border: 20px solid red;
+    vertical-align: top;
+    padding: 20px;
+}
+
+#pokedex h1{
+    text-align: center;
+}
