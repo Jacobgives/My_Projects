@@ -17,7 +17,7 @@ def gowork():
     _title = "He makes it to work"
     _content = "The man arrives at 8am and works till lunch."
     _link1 = "/eatsapple"
-    _link2 = "/eatsandwich"
+    _link2 = "/eatssandwich"
     _link1content = "He eats an apple for lunch."
     _link2content = "He eats a sandwich for lunch."
     return render_template('index.html', title=_title, content=_content, link1=_link1, link2=_link2, link1_content=_link1content, link2_content=_link2content) 
@@ -33,7 +33,7 @@ def eatsapple():
     return render_template('index.html', title=_title, content=_content, link1=_link1, link2=_link2, link1_content=_link1content, link2_content=_link2content)
 
 
-@app.route('/eatssandwhich')
+@app.route('/eatssandwich')
 def eatssand():
     _title = "He eats a sandwhich."
     _content = "He feels full and goes back to work satisfied. He notices something on the ground but doesn't think much of it and finishes his work day. "
