@@ -1,0 +1,19 @@
+from apps.users.models import User
+User.objects.create(first_name="Jacob", last_name="Givens", email_address="Jacobgives01@gmail.com", age=23)
+User.objects.first()
+User.objects.create(first_name="John", last_name="smith", email_address="Jacobgives00@gmail.com", age=25)
+User.objects.all()
+User.objects.create(first_name="Jesus", last_name="smith", email_address="Jacobgives02@gmail.com", age=35)
+from shell_helpers import create_valid_user
+create_valid_user()
+
+# __ sort users by last_name DESC
+>>> User.objects.all().order_by("last_name")
+
+# __ get user with id=3 and UPDATE to something else
+>>> user3 = User.objects.get(id=3)
+>>> user3.last_name = "something"
+>>> user3.save()
+
+# __ delete user with id=4
+>>> User.objects.get(id=4).delete()
