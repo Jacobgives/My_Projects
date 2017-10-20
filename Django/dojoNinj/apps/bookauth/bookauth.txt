@@ -1,0 +1,47 @@
+>>> from apps.bookauth.models import Book, Auth
+>>> b1 = Book.object.get(id=1)
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: type object 'Book' has no attribute 'object'
+>>> b1 = Book.objects.get(id=1)
+>>> b2 = Book.objects.get(id=2)
+>>> b3 = Book.objects.get(id=3)
+>>> b4 = Book.objects.get(id=4)
+>>> b5 = Book.objects.get(id=5)
+>>> 
+>>> a1 = Auth.objects.get(id=1)
+>>> a2 = Auth.objects.get(id=2)
+>>> a3 = Auth.objects.get(id=3)
+>>> a4 = Auth.objects.get(id=4)
+>>> a5 = Auth.objects.get(id=5)
+>>> a1.books.add(b2)
+>>> a5.books.add(b3)
+>>> a5.books.all()
+[<Book: Book object>]
+>>> a5.books.add(b1)
+>>> books.all
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'books' is not defined
+>>> a5.books.all().values
+<bound method QuerySet.values of [<Book: Book object>, <Book: Book object>]>
+>>> a5.books.all().values()
+[{'updated_at': datetime.datetime(2017, 10, 19, 20, 47, 53, 943025, tzinfo=<UTC>), 'created_at': datetime.datetime(2017, 10, 19, 20, 47, 53, 942943, tzinfo=<UTC>), 'desc': u'Coding dojo x-files', u'id': 3, 'name': u'C# Files'}, {'updated_at': datetime.datetime(2017, 10, 19, 20, 45, 20, 717427, tzinfo=<UTC>), 'created_at': datetime.datetime(2017, 10, 19, 20, 45, 20, 717382, tzinfo=<UTC>), 'desc': u'Gregory was a man. Long story short: now he is a coat hanger.', u'id': 1, 'name': u"Gregory's Folley"}]
+>>> a5.values()
+>>> b5.name='c#'
+>>> a5.first_name="Ketul"
+>>> a1.books.add(b1, b2)
+>>> a3.books.add(b1, b2, b3)        note: did not do the same  
+                                   assignment due to typos but very
+                                 similar.
+>>> a2.books.add(b1, b2, b3, b4)
+>>> a5.books.add(b1, b2, b3, b4, b5)
+>>> a5.books.all()
+[<Book: Book object>, <Book: Book object>, <Book: Book object>, <Book: Book object>, <Book: Book object>]
+>>> b2.authors.add(a5)
+>>> b2.authors.add(a4)
+>>> a3.books.all()
+[<Book: Book object>, <Book: Book object>, <Book: Book object>]
+>>> a2.books.all()
+[<Book: Book object>, <Book: Book object>, <Book: Book object>, <Book: Book object>]
+
