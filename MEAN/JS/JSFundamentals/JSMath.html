@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+      <title>JSMath</title>
+    </head>
+    <body>
+      <div id="first">
+
+      </div>
+      <div id='second'>
+
+      </div>
+      <script type="text/javascript">
+        function zero_negs(arr){
+          for(let x = 0; x <arr.length; x ++){
+            if(arr[x]<0){
+              return false;
+            }
+          }
+          return true;
+        }
+        console.log(zero_negs([1,2,3,4,5]));
+        console.log(zero_negs([1,2,3,4,-5]));
+        function is_even(num){
+          if(num%2){
+            return true;
+          }
+          return false;
+        }
+        console.log(is_even(2));
+        console.log(is_even(1));
+        function num_evens(arr){
+          let count = 0;
+          for(let i =0; i<arr.length; i++){
+            if(!(arr[i]%2)){
+              count++
+            }
+          }
+          return count;
+        }
+        console.log(num_evens([2,2,2,1,2]));
+        console.log(num_evens([1,1,1,1,2]));
+        function m_d_arr(n){
+          let z = [];
+          for(let i = 0; i <n; i++){
+            z[i]=Math.floor(Math.random()*10)
+          }
+          return z;
+        }
+        console.log(m_d_arr(5));
+        function rand_choice(arr){
+          return arr[Math.floor(Math.random()*arr.length)];
+        }
+        console.log(rand_choice([5,4,6,7,5,4,6]));
+      </script>
+    </body>
+    </html>

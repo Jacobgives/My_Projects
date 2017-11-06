@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>NinjaClass</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function Ninja(name){
+        this.name =name;
+        this.health =100;
+        var speed=3;
+        var strength=3;
+        this.sayName=function(){
+          console.log('ninja name: '+this.name);
+        }
+        this.stats=function(){
+          console.log('health: '+`${this.health}`+' speed: '+`${speed}`+' strength: '+`${strength}`);
+        }
+        this.drinkSake=function(){
+          this.health+=10;
+          console.log('new health is: '+`${this.health}`);
+        }
+        this.punch=function(ninja){
+          if(ninja.constructor===Ninja)
+          {
+            ninja.health-=5;
+            console.log(this.name + " used punch which brings " +ninja.name+"\'s health down by 5 to "+`${ninja.health}`+'.');
+          }
+          else{
+            console.log('Only ninjas are allowed in this fight.');
+          }
+        }
+        this.kick=function(ninja){
+          if(ninja.constructor===Ninja){
+            this.lhealth=15*strength
+            ninja.health-=this.lhealth;
+            console.log(this.name + " used kick which brings " +ninja.name+"\'s health down by "+`${this.lhealth}` +" to "+`${ninja.health}`+'.');
+          }
+          else{
+            console.log('Only ninjas are allowed in this fight.');
+          }
+        }
+      }
+      n1 = new Ninja('n1');
+      n2 = new Ninja('n2');
+    </script>
+  </body>
+</html>

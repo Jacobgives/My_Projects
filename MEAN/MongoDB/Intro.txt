@@ -1,0 +1,27 @@
+> use first_db
+switched to db first_db
+> db.createCollection('students')
+{ "ok" : 1 }
+> db.students.insert(name:"Jacob",home_state:"OK",lucky_number:17,birthdate:{month:04,day:11,year:1994}})
+2017-11-06T10:59:30.161-0600 SyntaxError: Unexpected token :
+> db.students.insert({name:"Jacob",home_state:"OK",lucky_number:17,birthdate:{month:04,day:11,year:1994}})
+WriteResult({ "nInserted" : 1 })
+> db.students.insert({name:"Kenn",home_state:"OK",lucky_number:1999922837,birthdate:{month:11,day:09,year:1932}})
+WriteResult({ "nInserted" : 1 })
+> db.students.insert({name:"Sam",home_state:"OK",lucky_number:1999922836,birthdate:{month:11,day:01,year:1949}})
+WriteResult({ "nInserted" : 1 })
+> db.students.insert({name:"Nick",home_state:"OK",lucky_number:1999922835,birthdate:{month:01,day:09,year:2011}})
+WriteResult({ "nInserted" : 1 })
+> db.students.insert({name:"John",home_state:"OK",lucky_number:7,birthdate:{month:07,day:07,year:400}})
+WriteResult({ "nInserted" : 1 })
+> db.students.find({lucky_number:{$gt:7}})
+{ "_id" : ObjectId("5a00951687716bbc4f1eb104"), "name" : "Jacob", "home_state" : "OK", "lucky_number" : 17, "birthdate" : { "month" : 4, "day" : 11, "year" : 1994 } }
+{ "_id" : ObjectId("5a00954887716bbc4f1eb105"), "name" : "Kenn", "home_state" : "OK", "lucky_number" : 1999922837, "birthdate" : { "month" : 11, "day" : 9, "year" : 1932 } }
+{ "_id" : ObjectId("5a00956487716bbc4f1eb106"), "name" : "Sam", "home_state" : "OK", "lucky_number" : 1999922836, "birthdate" : { "month" : 11, "day" : 1, "year" : 1949 } }
+{ "_id" : ObjectId("5a00959587716bbc4f1eb107"), "name" : "Nick", "home_state" : "OK", "lucky_number" : 1999922835, "birthdate" : { "month" : 1, "day" : 9, "year" : 2011 } }
+> db.students.find({lucky_number:{$lte:10}})
+{ "_id" : ObjectId("5a0095c787716bbc4f1eb108"), "name" : "John", "home_state" : "OK", "lucky_number" : 7, "birthdate" : { "month" : 7, "day" : 7, "year" : 400 } }
+> db.students.find({lucky_number:{$in:[1,2,3,4,5,6,7,8,9]}})
+{ "_id" : ObjectId("5a0095c787716bbc4f1eb108"), "name" : "John", "home_state" : "OK", "lucky_number" : 7, "birthdate" : { "month" : 7, "day" : 7, "year" : 400 } }
+
+

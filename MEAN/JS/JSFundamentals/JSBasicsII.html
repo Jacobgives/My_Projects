@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+      <title>JSBasicsII</title>
+    </head>
+    <body>
+      <div id="first">
+
+      </div>
+      <div id='second'>
+
+      </div>
+      <script type="text/javascript">
+        function magic_multiply(x,y){
+          if((x.constructor ===String) || (y.constructor === String)){
+            return "Error: Cannot multiply by a string."
+          }
+          if(x.constructor ===Array){
+            var z = [];
+            for(let i = 0; i < x.length; i++){
+              z[i]=x[i]*y;
+            }
+            return z;
+          }
+          else{
+            let z = x*y;
+            return z;
+          }
+        }
+        test1 = magic_multiply(5,2);
+        console.log(test1);
+        test2=magic_multiply(0,0);
+        console.log(test2);
+        test3=magic_multiply([1,2,3],2);
+        console.log(test3);
+        test4=magic_multiply(7, "three");
+        console.log(test4)
+      </script>
+    </body>
+    </html>

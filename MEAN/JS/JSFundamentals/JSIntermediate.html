@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+      <title>JSMath</title>
+    </head>
+    <body>
+      <div id="first">
+
+      </div>
+      <div id='second'>
+
+      </div>
+      <script type="text/javascript">
+        function star_str(n){
+          return '*'.repeat(n);
+        }
+        console.log(star_str(8));
+        function draw_stars(arr){
+          for( x = 0; x < arr.length; x ++){
+            if(arr[x].constructor===String){
+              console.log(arr[x][0].repeat(arr[x].length));
+            }
+            else{
+              console.log("*".repeat(arr[x]));
+            }
+          }
+        }
+        let x = [4, "jan", 1, "kyle", 5, 7, 25];
+        draw_stars(x);
+      </script>
+    </body>
+    </html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <title>Pokerman!</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      class Deck{
+        constructor(){
+          this.top=null;
+          this.size=52;
+          this.contents=[]
+          for(let i=0;i<this.size; i++){
+            let suit= i%4;
+            let face = i%13;
+            var card={
+              'face':face,
+              'suit':suit
+            }
+            this.contents.push(card);
+          }
+          this.top=card;
+        }
+        reset(){
+          this.top=null;
+          this.size=52;
+          this.contents=[]
+          for(let i=0;i<this.size; i++){
+            let suit= i%4;
+            let face = i%13;
+            var card={
+              'face':face,
+              'suit':suit
+            }
+            this.contents.push(card);
+          }
+          this.top=card;
+        }
+        shuffle(){
+          this.top=this.contents[26];
+          for(let i=0; i < this.size; i++)
+          if(i%2){
+            this.contents[i+1]=this.contents[i+26];
+            var temp=this.contents[i+1];
+          }
+          else if (i%2==0) {
+            temp=this.contents[i];
+            this.contents[i]=this.contents[i+26];
+          }
+        }
+        draw(){
+          let tempd=this.top;
+          this.top=this.contents[this.size--];
+          this.contents.pop()
+          return tempd;
+        }
+      }
+      class Player{
+        constructor(name){
+          this.name = name;
+          this.hand=[];
+        }
+        draw(deck){
+          let tempd=deck.top;
+          deck.top=deck.contents[this.size--];
+          deck.contents.pop()
+          this.hand += tempd;
+        }
+        discard(discard){
+          let newhand=[]
+          for(let i = 0; i <this.hand.length; i++){
+            if(this.hand[i]==discard){
+              continue
+            }
+            else{
+              newhand+=this.hand[i];
+            }
+          }
+          this.hand=newhand;
+        }
+      }
+      var d = new Deck();
+      d.shuffle();
+      var p=new Player('Jim')
+      for(let i = 0; i<5;i++){
+        p.draw(d);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+      <title>JSMath</title>
+    </head>
+    <body>
+      <h1>Students</h1>
+      <ul id='main'>
+
+      </ul>
+      <script type="text/javascript">
+        function appendList(el, arr, id){
+          for(let x=0; x<arr.length; x++){
+            let temp = arr[x];
+            arr[x] = document.createElement(el);
+            arr[x].innerHTML=temp;
+            document.getElementById(id).appendChild(arr[x]);
+          }
+        }
+        let students = ["Jeff", "Jenny", "Javier", "Joslyn", "Joe", "Jane", "Django"];
+        let target_id = "main";
+        let elt='li';
+        appendList(elt, students, target_id);
+      </script>
+    </body>
+    </html>

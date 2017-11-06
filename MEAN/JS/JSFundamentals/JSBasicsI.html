@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+      <title>JSBasicsI</title>
+    </head>
+    <body>
+      <div id="first">
+
+      </div>
+      <div id='second'>
+
+      </div>
+      <script type="text/javascript">
+        let x = [];
+        x.push('coding', 'dojo', 'rocks');
+        x.pop();
+        console.log(x);
+        document.getElementById("first").innerHTML = x;
+        const y = [];
+        console.log(y);
+        y.push(88);
+        let z = [9, 10, 6, 5, -1, 20, 13, 2]
+        for(let a=0;a <z.length-1; a++){
+          console.log(z[a]);
+        }
+        let names =['Kadie', 'Joe', 'Fritz', 'Pierre', 'Alphonso'];
+        for(let ln=0; ln <names.length; ln++){
+          console.log(names[ln].length);
+        }
+        for(let ln=0; ln <names.length; ln++){
+          if(names[ln].length==5){
+            console.log(names[ln]);
+          }
+        }
+        function yell(word){
+          return word.toUpperCase();
+          }
+        console.log(yell('ohmyjeebus'));
+
+      </script>
+    </body>
+    </html>
