@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>add/edit</title>
+  </head>
+  <body>
+    <div class="">
+      <%if(typeof(raven)!='undefined'){%>
+        <form class="" action="/conspiracy/<%=raven._id%>/" method="post">
+      <%}else{%>
+        <form class="" action="/conspiracy/" method="post">
+      <%}%>
+      <p><label for="name">name:</label><input type="text" name="name" value="<%=typeof(raven)!='undefined'?raven.name:''%>"></p>
+      <p><input type="submit" name="" value="<%=typeof(raven)!='undefined'?'edit':'add'%>"></p>
+      </form>
+    </div>
+  </body>
+</html>

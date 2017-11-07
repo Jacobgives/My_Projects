@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=f, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Conspiracy</title>
+</head>
+<body>
+    <div class="container">
+      <div class="">
+        <h2>Conspiracy:</h2>
+        <table border='1'>
+            <tr>
+                <th>Raven:</th>
+                <th>Action:</th>
+            </tr>
+            <% for(let raven=0; raven<conspiracy.length; raven++) { %>
+                <tr>
+                    <td><a href="/conspiracy/<%=conspiracy[raven]._id%>"><%= conspiracy[raven].name %></a></td>
+                    <td><a href="/conspiracy/edit/<%=conspiracy[raven]._id%>">edit</a>
+                        <form class="" action="/conspiracy/destroy/<%=conspiracy[raven]._id%>" method="post">
+                          <input type="submit" name="" value="delete">
+                        </form></td>
+                </tr>
+            <% } %>
+        </table>
+      </div>
+      <div class="grow">
+          <a href="/conspiracy/add">grow the conspiracy</a>
+      </div>
+
+    </div><!-- end_of_container -->
+</body>
+</html>
